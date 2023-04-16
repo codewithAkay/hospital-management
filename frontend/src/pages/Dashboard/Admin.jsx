@@ -110,7 +110,7 @@ const Dashboard = () => {
   const handleDelete=async(id)=>{
     const patient={id:id}
     try {
-      const data=await axios.post("http://localhost:4000/removeDoc",patient)
+      const data=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/removeDoc",patient)
       toast.success("Deleted SuccessFully")
       window.location.reload()
      } catch (error) {
@@ -120,7 +120,7 @@ const Dashboard = () => {
   const handleDeletePat=async(id)=>{
     const patient={id:id}
     try {
-      const data=await axios.post("http://localhost:4000/removePat",patient)
+      const data=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/removePat",patient)
       toast.success("Deleted SuccessFully")
       window.location.reload()
      } catch (error) {
@@ -132,7 +132,7 @@ const Dashboard = () => {
    const fetchData=async()=>{
     dispatch({type:"FETCH_REQUEST"})
     try {
-      const result=await axios.get('http://localhost:4000/fetchAll')
+      const result=await axios.get('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/fetchAll')
       dispatch({type:"FETCH_SUCCESS",payload:result.data})
     } catch (error) {
       dispatch({type:"FETCH_FAILURE",payload:error.message})
@@ -141,7 +141,7 @@ const Dashboard = () => {
    const fetchDoctor=async()=>{
     dispatch({type:"FETCH_DOCTOR"})
     try {
-      const result=await axios.get('http://localhost:4000/fetchDoc')
+      const result=await axios.get('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/fetchDoc')
       dispatch({type:"SUCCESS_DOCTOR",payload:result.data})
     } catch (error) {
       dispatch({type:"FAILURE_DOCTOR",payload:error.message})
@@ -150,7 +150,7 @@ const Dashboard = () => {
    const fetchPatient=async()=>{
     dispatch({type:"FETCH_PATIENT"})
     try {
-      const result=await axios.get('http://localhost:4000/fetchPat')
+      const result=await axios.get('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/fetchPat')
       dispatch({type:"SUCCESS_PATIENT",payload:result.data})
     } catch (error) {
       dispatch({type:"FAILURE_PATIENT",payload:error.message})

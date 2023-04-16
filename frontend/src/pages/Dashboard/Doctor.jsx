@@ -81,7 +81,7 @@ const Dashboard = () => {
   const handleApproved=async(id)=>{
     const Patid={id:id}
     try {
-      const data=await axios.post("http://localhost:4000/approved",Patid)
+      const data=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/approved",Patid)
       window.location.reload()
       toast.success("Approved Patient Request")
     } catch (error) {
@@ -92,7 +92,7 @@ const Dashboard = () => {
   const handleCross=async(id)=>{
     const Patid={id:id}
     try {
-      const data=await axios.post("http://localhost:4000/cancel",Patid)
+      const data=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/cancel",Patid)
       window.location.reload()
       toast.success("Approved Patient Request")
     } catch (error) {
@@ -105,7 +105,7 @@ const Dashboard = () => {
    const fetchData=async()=>{
     dispatch({type:"FETCH_REQUEST"})
     try {
-      const result=await axios.get('http://localhost:4000/fetchAppointment')
+      const result=await axios.get('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/fetchAppointment')
       dispatch({type:"FETCH_SUCCESS",payload:result.data})
     } catch (error) {
       dispatch({type:"FETCH_FAILURE",payload:error.message})

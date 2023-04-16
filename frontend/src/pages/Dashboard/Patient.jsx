@@ -94,7 +94,7 @@ const Dashboard = () => {
    const fetchData=async()=>{
     dispatch({type:"FETCH_REQUEST"})
     try {
-      const result=await axios.post('http://localhost:4000/fetchAppointmentPat',patientID)
+      const result=await axios.post('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/fetchAppointmentPat',patientID)
       dispatch({type:"FETCH_SUCCESS",payload:result.data})
     } catch (error) {
       dispatch({type:"FETCH_FAILURE",payload:error.message})
