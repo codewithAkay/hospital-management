@@ -6,7 +6,7 @@ function Choice() {
     <>
       <Grid  container spacing={4} justifyContent="center" sx={{width:"100",mt:25}}>
           <Box  border={1} borderColor='divider' sx={{p:3}} textAlign='center' component='form' id='signin_form'>
-            <h1 style={{fontSize:'50px'}}>Welcome to our Clinic</h1>
+            <h1 style={{fontSize:'50px'}}>AppointMe: Doctor Appointment <br /> Scheduling Application</h1>
             <h1>You Belong To</h1>
             <Link to='/Patlogin'>
             <Button sx={{marginY:'10px' ,width:'100%'}} type="submit" variant="contained" color='warning'>Patient</Button><br/>
