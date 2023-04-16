@@ -31,7 +31,7 @@ const AddDoctor= ({onClose}) => {
     password:password
   }
   try {
-    const {data} = await axios.post('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/addDoc',actualData)
+    const {data} = await axios.post('http://localhost:4000/addDoc',actualData)
     toast.success("Doctor added")
     handleClose();
   } catch (error) {

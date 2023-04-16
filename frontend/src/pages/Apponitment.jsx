@@ -37,7 +37,7 @@ const Appointment= ({onClose}) => {
     patient_id:UserInfo.id
   }
   try {
-    const {data} = await axios.post('http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/appointment',actualData)
+    const {data} = await axios.post('http://localhost:4000/appointment',actualData)
     toast.success("Appointment added")
     handleClose();
   } catch (error) {

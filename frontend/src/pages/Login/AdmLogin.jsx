@@ -23,7 +23,7 @@ function AdmLogin() {
       password:Formdata.get("password"),
     }
     try {
-      const {data}=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/authAdmin",actualData)
+      const {data}=await axios.post("http://localhost:4000/authAdmin",actualData)
       dispatch({
         type:"USER_SIGIN",payload:data
       })

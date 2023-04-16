@@ -15,7 +15,7 @@ function DocLogin() {
       password:Formdata.get("password"),
     }
     try {
-      const {data}=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/authDoc",actualData)
+      const {data}=await axios.post("http://localhost:4000/authDoc",actualData)
       localStorage.setItem("UserInfo",JSON.stringify(data))
       navigate("/docDash")
       window.location.reload()

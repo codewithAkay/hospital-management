@@ -26,7 +26,7 @@ const actualData={
     confirmPassword:Fdata.get('confirmpassword'),
 }
 try {
-    const {data}=await axios.post("http://appointmentproject-env.eba-bksebncg.us-east-1.elasticbeanstalk.com/patSignUp",actualData)
+    const {data}=await axios.post("http://localhost:4000/patSignUp",actualData)
     dispatch({
         type:"USER_SIGNUP",payload:data
     })
