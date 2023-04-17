@@ -92,7 +92,7 @@ const Dashboard = () => {
   const handleCross=async(id)=>{
     const Patid={id:id}
     try {
-      const data=await axios.post("http://localhost:4000/cancel",Patid)
+      const data=await axios.post("http://localhost:000/cancel",Patid)
       window.location.reload()
       toast.success("Approved Patient Request")
     } catch (error) {
