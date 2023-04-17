@@ -16,14 +16,19 @@ app.use('/',require('./routes/router.js'))
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'build', 'index.html'));
   });
-  app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://13.50.249.180:4000');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-  });
-
+  app.use(cors({
+    origin: ''
+}));
+const whitelist = ['http://localhost:4000', 'http://13.50.249.180:4000']
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error())
+    }
+  }
+}
  
   const PORT = 4000;
   

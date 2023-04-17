@@ -93,6 +93,13 @@ const Appointment= ({onClose}) => {
                 <MenuItem value="11:00am">11:00</MenuItem>
                 <MenuItem value="11:30am">11:30</MenuItem>
                 <MenuItem value="12:00am">12:00</MenuItem>
+                <MenuItem value="12:00am">1:00</MenuItem>
+                <MenuItem value="12:00am">2:00</MenuItem>
+                <MenuItem value="12:00am">3:00</MenuItem>
+                <MenuItem value="12:00am">4:00</MenuItem>
+                <MenuItem value="12:00am">5:00</MenuItem>
+                <MenuItem value="12:00am">6:00</MenuItem>
+                <MenuItem value="12:00am">7:00</MenuItem>
               </Select>
             </FormControl>
             <TextField
