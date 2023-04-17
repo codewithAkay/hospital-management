@@ -23,7 +23,7 @@ class controller{
                 res.status(200).send("Account Created SuccessFully")
 
             }else{
-                res.status(400).send("Passowrd  does not match")
+                res.status(401).send("Passowrd  does not match")
             }
             }else{
             res.status(404).send("Fill all Required Fields")
